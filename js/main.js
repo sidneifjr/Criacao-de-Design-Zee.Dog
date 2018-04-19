@@ -7,4 +7,4 @@ btn.addEventListener("click", function(){
   window.setTimeout(function(){
     modal.style.display = 'none';
   }, 3000);
-});
+}); 
