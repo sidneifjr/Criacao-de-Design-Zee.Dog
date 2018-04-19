@@ -4,4 +4,5 @@ Layout construído do zero, parte de um teste. Simulação de uma propaganda sob
 Meu objetivo foi construir uma tela fiel à identidade da empresa e, ao mesmo tempo, com certa liberdade criativa.
 
 Obs.: Os formulários não são funcionais, pois trabalhei com ênfase na interatividade e no design da página.
+<br>
 Obs. 2: O botão de submit dos formulários deveria abrir uma modal, porém a mesma não muda de estado. O problema surgiu após o upload. Logo, é preciso realizar o download dos arquivos na máquina para funcionar.
