@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Quicksand");
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 $main: #fff;
@@ -22,13 +22,20 @@ h1 {
   text-align: center;
   margin: 0.67rem 0;
 
-  @media (max-width: 500px) {
-    font-size: 1.6rem;
+  @media (min-width: 320px) and (max-width: 500px) {
+    font-size: 1.25rem;
   }
 }
 
-p, button {
+p,
+button {
   font-family: "Montserrat", sans-serif;
+}
+
+p {
+  @media (min-width: 320px) and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 }
 
 button {
@@ -46,23 +53,57 @@ button {
   &:hover {
     background: $main;
     color: $black;
-    -webkit-transform: translate3d(0,-2px,0);
-            transform: translate3d(0,-2px,0);
-    
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
-.one, .two {
+// adicionando flex somente com telas maiores.
+@media (min-width: 900px) {
+  .parent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.one,
+.two {
   position: relative;
   -ms-flex-preferred-size: 50vw;
-      flex-basis: 50vw;
+  flex-basis: 50vw;
   height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  // para as duas secções stackarem.
+  @media (max-width: 900px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    display: inherit;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .one {
@@ -70,39 +111,38 @@ button {
   background: $main;
 
   h1 {
-    -webkit-transform: translate3d(-300px,0,0);
-            transform: translate3d(-300px,0,0);
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
     -webkit-animation-name: slideIn;
-            animation-name: slideIn;
+    animation-name: slideIn;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+    animation-duration: 0.5s;
   }
 
   .man {
     width: 100%;
-    -webkit-transform: translate3d(-300px,0,0);
-            transform: translate3d(-300px,0,0);
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
 
     -webkit-animation-name: slideIn;
-
-            animation-name: slideIn;
+    animation-name: slideIn;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
+    animation-delay: 0.8s;
     -webkit-animation-duration: 0.8s;
-            animation-duration: 0.8s;
+    animation-duration: 0.8s;
 
     opacity: 0;
 
-    @media (max-width: 500px) {
-      width: 120%;
+    @media (min-width: 320px) and (max-width: 500px) {
+      width: 150%;
     }
   }
 
@@ -119,14 +159,13 @@ button {
     z-index: 99;
 
     -webkit-animation-name: fadeIn;
-
-            animation-name: fadeIn;
+    animation-name: fadeIn;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
     -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+    animation-duration: 0.5s;
     opacity: 0;
 
     // centraliza a logo.
@@ -151,7 +190,7 @@ button {
     padding: 0 5rem;
   }
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     padding: 0 7%;
   }
 
@@ -177,11 +216,11 @@ button {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: initial;
-        -ms-flex-align: initial;
-            align-items: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
 
     input {
       padding: 1rem;
@@ -203,11 +242,10 @@ button {
         -o-transition: ease-in-out 0.2s;
         transition: ease-in-out 0.2s;
 
-        -webkit-transform: translate3d(0,-2px,0);
-
-                transform: translate3d(0,-2px,0);
-        -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
 
         &::-webkit-input-placeholder {
           color: $main;
@@ -232,15 +270,15 @@ button {
     padding: 20px;
 
     background: black;
-    color:$main;
+    color: $main;
 
     position: absolute;
     bottom: 10px;
     right: 10px;
 
-    -webkit-transform: translate3d(0,100px,0);
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
 
-            transform: translate3d(0,100px,0);
     display: none;
     z-index: 99;
 
@@ -254,76 +292,54 @@ button {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
     -webkit-animation-name: slideUp;
-            animation-name: slideUp;
+    animation-name: slideUp;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
     // Simulando atraso de envio.
     -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-  }
-  
-  @-webkit-keyframes slideUp {
-    0% {
-      -webkit-transform: translate3d(0,100px,0);
-              transform: translate3d(0,100px,0);
-    }
-    100% {
-      -webkit-transform: translate3d(0,0,0);
-              transform: translate3d(0,0,0);
-    }
-  }
-  
-  @keyframes slideUp {
-    0% {
-      -webkit-transform: translate3d(0,100px,0);
-              transform: translate3d(0,100px,0);
-    }
-    100% {
-      -webkit-transform: translate3d(0,0,0);
-              transform: translate3d(0,0,0);
-    }
+    animation-delay: 0.5s;
   }
 }
 
 @-webkit-keyframes slideIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-300px,0,0);
-            transform: translate3d(-300px,0,0);
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-300px,0,0);
-            transform: translate3d(-300px,0,0);
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -345,41 +361,24 @@ button {
   }
 }
 
-// adicionando flex somente com telas maiores.
-@media (min-width: 900px) {
-  
-  .parent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
-  
-  .one, .two {
-    display: inherit;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-  
 }
 
-// para as duas secções stackarem uma em cima da outra.
-@media (max-width: 900px) {
-  
-  .one, .two {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
-  
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
