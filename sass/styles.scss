@@ -12,12 +12,6 @@ $main: #fff;
 $black: #202020;
 $blue: rgba(1, 94, 175, 1);
 
-%flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 body {
   line-height: 1.5;
 }
@@ -46,14 +40,12 @@ p {
 
 button {
   font-weight: bold;
-  background: transparent;
-  color: $main;
-  
-  border: solid 2px $main;
   padding: 1rem 2.5rem;
+  background: transparent;
+  border: solid 2px $main;
+  color: $main;
   cursor: pointer;
   outline: none;
-
   -webkit-transition: ease-in-out 0.2s;
   -o-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
@@ -104,7 +96,7 @@ button {
   }
 
   @media (min-width: 900px) {
-    display: flex;
+    display: inherit;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -115,8 +107,8 @@ button {
 }
 
 .one {
-  background: $main;
   padding: 0 5rem;
+  background: $main;
 
   h1 {
     -webkit-transform: translate3d(-300px, 0, 0);
@@ -133,8 +125,6 @@ button {
 
   .man {
     width: 100%;
-    opacity: 0;
-
     -webkit-transform: translate3d(-300px, 0, 0);
     transform: translate3d(-300px, 0, 0);
 
@@ -149,6 +139,8 @@ button {
     -webkit-animation-duration: 0.8s;
     animation-duration: 0.8s;
 
+    opacity: 0;
+
     @media (min-width: 320px) and (max-width: 500px) {
       width: 150%;
     }
@@ -158,8 +150,8 @@ button {
     height: 80px;
     width: 80px;
 
-    background: transparent;
     border: solid 2px $black;
+    background: transparent;
 
     position: absolute;
     top: 25px;
@@ -190,9 +182,9 @@ button {
 }
 
 .two {
-  background: $blue;
-  color: $main;
   padding: 0 5rem;
+  color: $main;
+  background: $blue;
 
   @media (min-width: 1000px) {
     padding: 0 5rem;
@@ -207,8 +199,8 @@ button {
   }
 
   p {
-    text-align: justify;
     margin-bottom: 1rem;
+    text-align: justify;
 
     &.second-p {
       margin: 0;
@@ -218,8 +210,10 @@ button {
   form {
     width: 100%;
     padding: 0.5rem 1rem;
-    
-    @extend %flex;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -229,9 +223,9 @@ button {
     align-items: initial;
 
     input {
-      color: $black;
       padding: 1rem;
       margin: 1rem 0;
+      color: $black;
       outline: none;
       -webkit-transition: ease-in-out 0.2s;
       -o-transition: ease-in-out 0.2s;
@@ -253,21 +247,30 @@ button {
         -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
 
-        &::-webkit-input-placeholder {color: $main;}
+        &::-webkit-input-placeholder {
+          color: $main;
+        }
 
-        &:-ms-input-placeholder {color: $main;}
+        &:-ms-input-placeholder {
+          color: $main;
+        }
 
-        &::-ms-input-placeholder {color: $main;}
+        &::-ms-input-placeholder {
+          color: $main;
+        }
 
-        &::placeholder {color: $main;}
+        &::placeholder {
+          color: $main;
+        }
       }
     }
   }
 
-  .modal {    
+  .modal {
+    padding: 20px;
+
     background: black;
     color: $main;
-    padding: 20px;
 
     position: absolute;
     bottom: 10px;
@@ -279,11 +282,15 @@ button {
     display: none;
     z-index: 99;
 
-    p {margin: 0;}
+    p {
+      margin: 0;
+    }
   }
 
   .active {
-    @extend %flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
