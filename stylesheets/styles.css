@@ -9,18 +9,11 @@
 }
 
 /* line 15, ../sass/styles.scss */
-.two form, .two .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* line 21, ../sass/styles.scss */
 body {
   line-height: 1.5;
 }
 
-/* line 25, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
 h1 {
   font-family: "Quicksand", cursive;
   font-size: 2.5rem;
@@ -28,26 +21,26 @@ h1 {
   margin: 0.67rem 0;
 }
 @media (min-width: 320px) and (max-width: 500px) {
-  /* line 25, ../sass/styles.scss */
+  /* line 19, ../sass/styles.scss */
   h1 {
     font-size: 1.25rem;
   }
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 p,
 button {
   font-family: "Montserrat", sans-serif;
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
-  /* line 41, ../sass/styles.scss */
+  /* line 35, ../sass/styles.scss */
   p {
     font-size: 0.8rem;
   }
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 button {
   font-weight: bold;
   padding: 1rem 2.5rem;
@@ -60,7 +53,7 @@ button {
   -o-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
 }
-/* line 59, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 button:hover {
   background: #fff;
   color: #202020;
@@ -71,14 +64,14 @@ button:hover {
 }
 
 @media (min-width: 900px) {
-  /* line 72, ../sass/styles.scss */
+  /* line 66, ../sass/styles.scss */
   .parent {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-/* line 79, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 .one,
 .two {
   position: relative;
@@ -91,7 +84,7 @@ button:hover {
   flex-direction: column;
 }
 @media (max-width: 900px) {
-  /* line 79, ../sass/styles.scss */
+  /* line 73, ../sass/styles.scss */
   .one,
   .two {
     display: -webkit-box;
@@ -107,10 +100,10 @@ button:hover {
   }
 }
 @media (min-width: 900px) {
-  /* line 79, ../sass/styles.scss */
+  /* line 73, ../sass/styles.scss */
   .one,
   .two {
-    display: flex;
+    display: inherit;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -120,12 +113,12 @@ button:hover {
   }
 }
 
-/* line 115, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 .one {
   padding: 0 5rem;
   background: #fff;
 }
-/* line 119, ../sass/styles.scss */
+/* line 113, ../sass/styles.scss */
 .one h1 {
   -webkit-transform: translate3d(-300px, 0, 0);
   transform: translate3d(-300px, 0, 0);
@@ -138,7 +131,7 @@ button:hover {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
 }
-/* line 132, ../sass/styles.scss */
+/* line 126, ../sass/styles.scss */
 .one .man {
   width: 100%;
   -webkit-transform: translate3d(-300px, 0, 0);
@@ -156,12 +149,12 @@ button:hover {
   opacity: 0;
 }
 @media (min-width: 320px) and (max-width: 500px) {
-  /* line 132, ../sass/styles.scss */
+  /* line 126, ../sass/styles.scss */
   .one .man {
     width: 150%;
   }
 }
-/* line 155, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 .one .logo {
   height: 80px;
   width: 80px;
@@ -182,53 +175,56 @@ button:hover {
   opacity: 0;
 }
 @media (max-width: 500px) {
-  /* line 155, ../sass/styles.scss */
+  /* line 149, ../sass/styles.scss */
   .one .logo {
     left: initial;
   }
 }
-/* line 182, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 .one .logo img {
   margin: 0 auto;
   padding: 15px 20px;
   max-width: 100%;
 }
 
-/* line 190, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 .two {
   padding: 0 5rem;
   color: #fff;
   background: #015eaf;
 }
 @media (min-width: 1000px) {
-  /* line 190, ../sass/styles.scss */
+  /* line 184, ../sass/styles.scss */
   .two {
     padding: 0 5rem;
   }
 }
 @media (max-width: 1000px) {
-  /* line 190, ../sass/styles.scss */
+  /* line 184, ../sass/styles.scss */
   .two {
     padding: 0 7%;
   }
 }
-/* line 203, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .two h1 {
   margin: 0.5rem 0;
 }
-/* line 207, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .two p {
   margin-bottom: 1rem;
   text-align: justify;
 }
-/* line 211, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .two p.second-p {
   margin: 0;
 }
-/* line 216, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .two form {
   width: 100%;
   padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -237,7 +233,7 @@ button:hover {
   -ms-flex-align: initial;
   align-items: initial;
 }
-/* line 229, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 .two form input {
   padding: 1rem;
   margin: 1rem 0;
@@ -247,11 +243,11 @@ button:hover {
   -o-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
 }
-/* line 238, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 .two form input:last-child {
   margin: 0 0 1rem 0;
 }
-/* line 242, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 .two form input:focus {
   color: #fff;
   background: #202020;
@@ -263,23 +259,23 @@ button:hover {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 254, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 .two form input:focus::-webkit-input-placeholder {
   color: #fff;
 }
-/* line 258, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 .two form input:focus:-ms-input-placeholder {
   color: #fff;
 }
-/* line 262, ../sass/styles.scss */
+/* line 258, ../sass/styles.scss */
 .two form input:focus::-ms-input-placeholder {
   color: #fff;
 }
-/* line 266, ../sass/styles.scss */
+/* line 262, ../sass/styles.scss */
 .two form input:focus::placeholder {
   color: #fff;
 }
-/* line 273, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 .two .modal {
   padding: 20px;
   background: black;
@@ -292,12 +288,15 @@ button:hover {
   display: none;
   z-index: 99;
 }
-/* line 289, ../sass/styles.scss */
+/* line 285, ../sass/styles.scss */
 .two .modal p {
   margin: 0;
 }
-/* line 294, ../sass/styles.scss */
+/* line 290, ../sass/styles.scss */
 .two .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
