@@ -7,7 +7,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
- 
+
 /* line 15, ../sass/styles.scss */
 body {
   line-height: 1.5;
@@ -191,7 +191,7 @@ button:hover {
 .two {
   padding: 0 5rem;
   color: #fff;
-  background: #015eaf;
+  background: #202020;
 }
 @media (min-width: 1000px) {
   /* line 184, ../sass/styles.scss */

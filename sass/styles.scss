@@ -184,7 +184,7 @@ button {
 .two {
   padding: 0 5rem;
   color: $main;
-  background: $blue;
+  background: $black; // ou $blue.
 
   @media (min-width: 1000px) {
     padding: 0 5rem;
