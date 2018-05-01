@@ -269,8 +269,9 @@ button {
   .modal {
     padding: 20px;
 
-    background: black;
-    color: $main;
+    background: $main;
+    color: $black;
+    font-weight: bold;
 
     position: absolute;
     bottom: 10px;

@@ -278,8 +278,9 @@ button:hover {
 /* line 269, ../sass/styles.scss */
 .two .modal {
   padding: 20px;
-  background: black;
-  color: #fff;
+  background: #fff;
+  color: #202020;
+  font-weight: bold;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -288,11 +289,11 @@ button:hover {
   display: none;
   z-index: 99;
 }
-/* line 285, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 .two .modal p {
   margin: 0;
 }
-/* line 290, ../sass/styles.scss */
+/* line 291, ../sass/styles.scss */
 .two .active {
   display: -webkit-box;
   display: -ms-flexbox;
